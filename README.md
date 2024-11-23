@@ -34,24 +34,47 @@ The dataset used for training the models is available [here](https://www.kaggle.
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+```
 
-## 2. Install Dependencies
+### 2. Install Dependencies
 
 Install Python dependencies using Pipenv:
-
 ```bash
 pip install pipenv
 pipenv install
 pipenv shell
+```
 
+### 3. Run the Flask Application Locally
 
-### 1. Run the Flask Application Locally
-
-To test without Docker:
+To run without Docker:
 ```bash
-python predict.py
+gunicorn --bind 0.0.0.0:9696 predict:app
+```
 
 The API will run at http://localhost:9696/predict.
+
+To test the app:
+```bash
+python predict-test.py
+```
+
+## Using Docker
+
+### 1.Build the Docker Image
+```bash
+docker build -t alzheimers-diagnosis .
+```
+
+### 2. Run the Docker Container
+```bash
+docker run -p 9696:9696 alzheimers-diagnosis
+```
+
+
+
+
+
 
 
 
