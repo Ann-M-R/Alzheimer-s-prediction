@@ -32,8 +32,8 @@ The dataset used for training the models is available [here](https://www.kaggle.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Ann-M-R/Alzheimer-s-prediction.git
+cd Alzheimer-s-prediction
 ```
 
 ### 2. Install Dependencies
@@ -59,7 +59,7 @@ To test the app:
 python predict-test.py
 ```
 
-## Using Docker
+### Using Docker
 
 ### 1.Build the Docker Image
 ```bash
@@ -70,8 +70,17 @@ docker build -t alzheimers-diagnosis .
 ```bash
 docker run -p 9696:9696 alzheimers-diagnosis
 ```
+---
 
+## Files in the Repository
 
+- **notebook.ipynb**: Contains data exploration, feature engineering, and training of multiple models (Logistic Regression, Decision Tree, Random Forest, XGBoost).
+- **train.py**: Script to train the best model and save it as `model.bin`.
+- **predict.py**: Flask application for serving predictions.
+- **predict-test.py**: Script to test the Flask API.
+- **model.bin**: Saved XGBoost model.
+- **alzheimers_disease_data.csv**: Dataset used for training.
+- **dockerfile**: Docker configuration file.
 
 
 
