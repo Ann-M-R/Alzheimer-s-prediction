@@ -74,13 +74,13 @@ docker run -p 9696:9696 alzheimers-diagnosis
 
 ## Files in the Repository
 
-- **notebook.ipynb**: Contains data exploration, feature engineering, and training of multiple models (Logistic Regression, Decision Tree, Random Forest, XGBoost).
-- **train.py**: Script to train the best model and save it as `model.bin`.
-- **predict.py**: Flask application for serving predictions.
-- **predict-test.py**: Script to test the Flask API.
-- **model.bin**: Saved XGBoost model.
-- **alzheimers_disease_data.csv**: Dataset used for training.
-- **dockerfile**: Docker configuration file.
+- `notebook.ipynb`: Contains data exploration, feature engineering, and training of multiple models (Logistic Regression, Decision Tree, Random Forest, XGBoost).
+- `train.py`: Script to train the best model and save it as `model.bin`.
+- `predict.py`: Flask application for serving predictions.
+- `predict-test.py`: Script to test the Flask API.
+- `model.bin`: Saved XGBoost model.
+- `alzheimers_disease_data.csv`: Dataset used for training.
+- `dockerfile`: Docker configuration file.
 
 
 
